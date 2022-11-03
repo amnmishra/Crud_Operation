@@ -1,0 +1,50 @@
+﻿@model Crud_Operation.Models.VenderMaster
+@{
+    ViewData["Title"] = "AddVender";
+}
+<style>
+    .form{
+        border:2px solid #ddd;
+        margin:50px;
+        padding:20px;
+    }
+    
+</style>
+
+
+<div class="form">
+    <h5>Registration Form</h5><br>
+    <form asp-controller="VenderMaster" asp-action="AddVender" method="post">    
+        <div class="row">
+            <div class="col-sm-4 mt-3">
+                <input type="hidden" asp-for="Id" >
+                <label>Vender Name</label>
+                <input type="text" asp-for="VenderName" class="form-control" placeholder="Aman">
+            </div>
+            <div class="col-sm-4 mt-3">
+                <label>Vender Company</label>
+                <input type="text" asp-for="CompanyName" class="form-control" placeholder="Alight">
+            </div>
+            <div class="col-sm-4 mt-3">
+                <label>Vender Email</label>
+                <input type="email" asp-for="Email" class="form-control" placeholder="email@gmail.com">
+            </div>        
+            <div class="col-sm-4 mt-3">
+                <label>Vender Mobile No.</label>
+                <input type="number" asp-for="MobileNo" class="form-control" placeholder="+91 0000000000">
+            </div>
+            <div class="col-sm-4 mt-3">
+                <label>Vender Address</label>
+                <textarea class="form-control" placeholder="Gujrat" asp-for="Address"></textarea>
+            </div>
+            
+            <div class="col-sm-4 mt-3">
+                <label>Vender PinCode</label>
+                <input type="text" asp-for="Pincode" class="form-control" placeholder="271001">
+            </div>
+            
+        </div>
+    
+        <input type="Submit" value="Submit" class="btn btn-info mt-2">
+    </form>
+</div>
